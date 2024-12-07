@@ -1,0 +1,269 @@
+body{
+    line-height: 1.4;
+    background-color: #c4bdbd;
+    color: #1b1a1a;
+    z-index: 1000;
+}
+header {
+    background-color: #c4bdbd;
+    color: #1b1a1a;
+    padding: 0px 0px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+header h2 {
+    font-size: 2em;
+    margin: 0;
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+nav ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+    gap: 15px; 
+}
+nav ul li a:hover {
+    color: #ed7627;
+}
+nav ul li {
+    background-color: #1b1a1a; 
+}
+nav ul li a {
+    text-decoration: none; 
+    color: #eee9e9; 
+    padding: 5px 20px; 
+    display: block; 
+}
+main {
+    margin-top: 110px;
+
+}
+.conciertos-en-vivo {
+    text-align: center; 
+    margin: 20px 0; 
+}
+section.fotos-conciertos {
+    background-color: #9d9898;
+    border: 2px solid #4a4646;
+    padding: 20px;
+    margin: 20px 0; 
+    max-width: 700px; 
+    border-radius: 10px;
+    float: left; 
+}
+
+section.fotos-conciertos h2 {
+    text-align: center;
+}
+
+.fotos-conciertos p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.fotos-conciertos .galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.fotos-conciertos .galeria-fotos img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #c4bdbd;
+    transition: transform 0.3s ease; 
+    cursor: pointer; 
+}
+
+/* Efecto de zoom al pasar el cursor */
+.galeria-fotos img:hover {
+    transform: scale(1.1); 
+}
+
+/* este medtodo fue el que utilice para aumentar el tamaño de las imagenes ya que los otros no los entendi */
+.galeria-fotos img:active {
+    transform: scale(2.5); 
+    z-index: 10; 
+}
+h4 {
+    font-size: 1.0em;
+}
+section.videoclips {
+    background-color: #9d9898;
+    border: 2px solid #4a4646;
+    padding: 20px;
+    margin: 20px 0; 
+    max-width: 700px; 
+    border-radius: 10px;
+    float: right; 
+    height: 800px;
+}
+h5 {
+    font-size: 1.0em;
+}
+section.album-importante {
+    background-color: #9d9898; 
+    border: 2px solid #4a4646; 
+    padding: 20px; 
+    margin: 20px 0; 
+    max-width: 800px; 
+    border-radius: 10px; 
+    float: left; 
+}
+section.album-importante img {
+    width: 100%; 
+    height: auto; 
+    max-width: 700px; 
+    border-radius: 8px; 
+    margin-top: 10px; 
+}
+h6 {
+    font-size: 1.0em;
+}
+section.entrevistas {
+    background-color: #9d9898; 
+    border: 2px solid #4a4646; 
+    padding: 20px; 
+    margin: 20px 0; 
+    max-width: 800px; 
+    border-radius: 10px; 
+    float: right;
+    height: 800px;
+}
+    @media (max-width: 1024px) {
+    header h2 {
+        font-size: 1.8em;
+    }
+    nav ul {
+        gap: 25px; 
+    }
+     /*esto es para que todos los cuadros queden centrados*/
+    section.fotos-conciertos, 
+    section.videoclips, 
+    section.album-importante, 
+    section.entrevistas {
+        max-width: 90%;
+        float: none; 
+        margin: 20px auto; 
+    }
+    section.videoclips {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        height: auto; 
+    }
+    section.album-importante{
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        height: auto;
+
+    }  
+    section.entrevistas {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        height: auto; 
+    }
+    .fotos-conciertos .galeria-fotos {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+    @media (max-width: 768px) {
+header h2 {
+    font-size: 1.6em; 
+}
+nav ul {
+    gap: 20px;
+}
+section.fotos-conciertos, 
+section.videoclips, 
+section.album-importante, 
+section.entrevistas {
+    max-width: 85%; 
+    float: none; 
+    margin: 20px auto; 
+    max-width: 90%;
+}
+section.entrevistas {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    height: auto; 
+    max-width: 90%;
+}
+.fotos-conciertos .galeria-fotos {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); 
+}
+}
+@media (max-width: 480px) {
+    
+    header h2 {
+        font-size: 1.4em; 
+    }
+    nav ul {
+        flex-direction: column; 
+        gap: 5px; 
+    }
+    section.entrevistas,
+    section.videoclips,
+    section.album-importante,
+    section.fotos-conciertos {
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        text-align: center; 
+        width: 100%; 
+        margin: 10px auto; 
+        padding: 10px; 
+        border-radius: 6px; 
+        margin-left: 3%;
+    }
+    section.album-importante img {
+        max-width: 85%; 
+        height: auto; 
+        margin: 10px auto; 
+    }
+    section.entrevistas iframe {
+        width: 100px; 
+        height: 170px; 
+        margin: 0 auto; 
+        display: block; 
+    }
+  
+    
+    .fotos-conciertos .galeria-fotos {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+        gap: 5px; 
+    }
+/*No pude centrar los videos en esta pantalla*/
+    iframe {
+        width: 100%; 
+        height: 180px; 
+    }
+}
