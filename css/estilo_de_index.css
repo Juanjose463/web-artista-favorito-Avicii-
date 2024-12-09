@@ -75,10 +75,6 @@ nav ul li a {
 }
 main {
     margin-top: 120px; /* esto es para ajustar el espacio del contenido ya que el titulo y la barra no dejaban observar */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra los artículos */
-    gap: 20px;
 }
 main article {
     margin: 0; 
